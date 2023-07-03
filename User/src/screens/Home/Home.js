@@ -1,12 +1,19 @@
 
-import React from "react"
-import {View,Text} from "react-native"
+import React,{useState} from "react"
+import {View,Text,ScrollView} from "react-native"
+import { styles } from "./styles"
 import { scale } from "react-native-size-matters"
+import { SearchBox } from "../../Utils/Utils"
+import { globalStyles } from "../../globalStyles/globalStyles"
 
 const Home =()=>{
+  const [name,setname]=useState("")
     return(
-       <View>
-        {/* <Text style={{color:"red",fontSize:scale(20),fontFamily:'Roboto-Bold'}} >Raviteja</Text> */}
+       <View style={globalStyles.container} >
+        <SearchBox valuesGiven={name} changeText={(text)=>setname(text)} />
+    <ScrollView style={styles.bodyContent} >
+
+    </ScrollView>
        </View>
     )
 }

@@ -17,7 +17,6 @@ const App=()=>{
       initialRouteName={routes.home}
       screenOptions={{
         headerShown: false,
-        
       }} 
     >
       <Stack.Screen name={routes.home} component={Home} />
