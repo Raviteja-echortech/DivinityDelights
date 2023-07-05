@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, TextInput,TouchableOpacity} from 'react-native';
+import {View, TextInput,TouchableOpacity,Text} from 'react-native';
 import { styles } from './styles';
 import SearchIcon from '../assets/svg/SearchIcon';
+import BackArrow from "../assets/svg/BackArrow"
 import Hamberugmenu from "../assets/svg/Hamberugmenu"
-//import Cart from "../assets/svg/Cart"
 export const SearchBox =  ({valuesGiven, changeText,search,hamberugmenu}) => {
   return (
     <View style={styles.container}>
@@ -25,3 +25,23 @@ export const SearchBox =  ({valuesGiven, changeText,search,hamberugmenu}) => {
   );
 };
 
+export const HeaderComponent=({props,title})=>{
+  return(
+    <View
+    style={styles.headerParent}>
+        <View style={{width:"20%",}} >
+    <TouchableOpacity
+      style={styles.BackBtn}
+      onPress={() => props?.navigation?.goBack()}>
+      <BackArrow />
+    </TouchableOpacity>
+    </View>
+    <View style={styles.titleBox} >
+      <Text
+        style={styles. titleContent}>
+        {title}
+      </Text>
+    </View>
+  </View>
+  )
+}

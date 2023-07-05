@@ -1,10 +1,9 @@
-import { ScaledSheet } from "react-native-size-matters";
+import {ScaledSheet} from 'react-native-size-matters';
 
-export const globalStyles=ScaledSheet.create({
-       container:{
-        height:"100%",
-        width:"100%",
-        backgroundColor:"white",
-       }
-  
-})
+export const globalStyles = ScaledSheet.create({
+  container: {
+    height: '100%',
+    width: '100%',
+    backgroundColor: 'white',
+  },
+});

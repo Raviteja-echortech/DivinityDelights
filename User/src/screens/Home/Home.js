@@ -87,7 +87,7 @@ const Home = (props) => {
               return (
                 <TouchableOpacity
                   activeOpacity={0.7}
-                  onPress={()=>props?.navigation?.navigate(routes.singleDish)}
+                  onPress={()=>props?.navigation?.navigate(routes.singleDish,{item})}
                   style={styles.bestSellersCards}>
                   <Image
                     source={{uri: item.image}}
