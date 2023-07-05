@@ -4,7 +4,7 @@ export const styles=ScaledSheet.create({
     container: {
         flexDirection: 'row',
          justifyContent:"center",
-        backgroundColor: '#f2f2f2',
+        backgroundColor: '#f2f2f2',//#f2f2f2,
         paddingHorizontal:"10@s",
         paddingVertical:"10@s",
       },
@@ -15,7 +15,7 @@ export const styles=ScaledSheet.create({
         backgroundColor: 'white',
         borderColor: '#D3D3D3',
         height: '40@s',
-        width: '90%',
+        width: '85%',
         borderRadius: '100@s',
         shadowColor: '#000',
         shadowOffset: {
@@ -32,7 +32,12 @@ export const styles=ScaledSheet.create({
       },
       searchIcon: {
         width: '10%',
-        height: '100%',
+        justifyContent: "center",
+        height:"100%",
+        alignItems:"center",
+      },
+      hamberger:{
+        width: '15%',  
         justifyContent: 'center',
         alignItems: 'center',
       },
