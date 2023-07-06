@@ -55,19 +55,15 @@ const Home = (props) => {
                 <View style={styles.orderMe}>
                   <Image
                     source={{uri: item.image}}
-                    style={{height: 80, width: 80}}
+                    style={styles. photoArrange}
                   />
                   <Text
                     numberOfLines={1}
-                    style={{
-                      justifyContent: 'center',
-                      fontFamily: 'Rashkey',
-                      color: 'black',
-                    }}>
+                    style={styles.desTxt}>
                     {item.description}
                   </Text>
-                  <Text>₹{item.cost}</Text>
-                  <TouchableOpacity style={styles.addOrderBtn}>
+                  <Text style={{color:"#FEBD69",fontFamily:"OpenSans-SemiBold",fontSize:17}} >₹{item.cost}</Text>
+                  <TouchableOpacity style={styles.addOrderBtn} onPress={()=>props?.navigation?.navigate(routes.singleDish,{item})} >
                     <Text style={styles.addBtnOrderContent}>Add</Text>
                   </TouchableOpacity>
                 </View>
@@ -85,9 +81,7 @@ const Home = (props) => {
             columnWrapperStyle={{justifyContent: 'space-around'}}
             renderItem={({item}) => {
               return (
-                <TouchableOpacity
-                  activeOpacity={0.7}
-                  onPress={()=>props?.navigation?.navigate(routes.singleDish,{item})}
+                <View
                   style={styles.bestSellersCards}>
                   <Image
                     source={{uri: item.image}}
@@ -104,10 +98,10 @@ const Home = (props) => {
                     }}>
                     ₹{item.cost}
                   </Text>
-                  <TouchableOpacity style={styles.addBtn}>
+                  <TouchableOpacity style={styles.addBtn} onPress={()=>props?.navigation.navigate(routes.singleDish,{item})} >
                     <Text style={styles.addBtnContent}>Add</Text>
                   </TouchableOpacity>
-                </TouchableOpacity>
+                </View>
               );
             }}
             keyExtractor={item => item.id.toString()}

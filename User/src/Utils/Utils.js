@@ -26,6 +26,7 @@ export const SearchBox =  ({valuesGiven, changeText,search,hamberugmenu}) => {
 };
 
 export const HeaderComponent=({props,title})=>{
+  console.log(props)
   return(
     <View
     style={styles.headerParent}>

@@ -1,9 +1,13 @@
 import React from "react"
 import {View,Text} from "react-native"
-const Cart=()=>{
+import { HeaderComponent } from "../../Utils/Utils"
+const Cart=(props)=>{
     return(
-        <View>
-     <Text>Cart Items</Text>
+        <View style={{backgroundColor:"white"}} >
+            <HeaderComponent title={"Cart"} props={props} />
+           <View>
+
+           </View>
         </View>
     )
 }

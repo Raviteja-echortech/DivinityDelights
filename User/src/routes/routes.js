@@ -5,5 +5,6 @@
     SplashScreen:"SplashScreen",
     profile:"profile",
     footer:"Footer",
-    wishList:"WishList"
+    wishList:"WishList",
+    paymentGateWay:"paymentGateWay"
 }

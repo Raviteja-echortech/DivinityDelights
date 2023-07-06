@@ -6,7 +6,7 @@ export const styles = ScaledSheet.create({
     justifyContent: 'center',
     backgroundColor: '#f2f2f2', //#f2f2f2,
     paddingHorizontal: '10@s',
-    paddingVertical: '10@s',
+    paddingVertical: '5@s',
   },
   searchBarContainer: {
     flexDirection: 'row',

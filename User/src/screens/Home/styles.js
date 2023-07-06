@@ -16,18 +16,18 @@ export const styles = ScaledSheet.create({
     shadowOpacity: '0.25@s',
     shadowRadius: '3.84@s',
     elevation: '5@s',
-    borderRadius: '10@s',
+    borderRadius: '5@s',
   },
   orderMe: {
-    width: '150@s',
-    height: '160@s',
+    width: '190@s',
+    height: '180@s',
     marginTop: '20@s',
-    paddingTop:"10@s",
+    paddingTop: '10@s',
     paddingBottom: '10@s',
     marginBottom: '30@s',
     marginLeft: '10@s',
-    borderRadius:"10@s",
-    backgroundColor: 'white',
+    borderRadius: '3@s',
+    backgroundColor: '#333333',
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
@@ -113,4 +113,13 @@ export const styles = ScaledSheet.create({
     fontFamily: 'OpenSans-Bold',
     fontSize: '16@s',
   },
+  photoArrange: {
+    height: '70@s',
+    width: '70@s',
+  },
+  desTxt:{
+    justifyContent: 'center',
+    fontFamily: 'Rashkey',
+    color: '#FEBD69',
+  }
 });
