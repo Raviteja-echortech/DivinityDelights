@@ -42,12 +42,12 @@ export const styles = ScaledSheet.create({
     alignItems: 'center',
   },
   BackBtn: {
-    width: '40@s',
-    height: '40@s',
+    width: '35@s',
+    height: '35@s',
     backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: '25@s',
+    borderRadius: '17@s',
     shadowColor: '#000',
     shadowOffset: {
       width: '0@s',
@@ -74,5 +74,32 @@ export const styles = ScaledSheet.create({
     width: '70%',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  //progressbar
+  progressCircleParent: {
+    width: '20@s',
+    height: '20@s',
+    borderWidth: '1@s',
+    borderRadius: '10@s',
+    borderColor: 'red',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  progressCircleChild: {
+    width: '70%',
+    height: '70%',
+    borderWidth:1,
+    borderColor:"red",
+    borderRadius: '60@s',
+    alignSelf:"center",
+  },
+  progressInnerBox: {
+    alignItems: 'center',
+    //flexDirection:"row"
+  },
+  progressBarTxt: {
+    fontSize: "14@s",
+    color: 'black',
+    fontFamily: 'Roboto-Medium',
   },
 });

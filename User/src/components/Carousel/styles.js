@@ -17,6 +17,7 @@ const styles = ScaledSheet.create({
         alignItems: 'center',
         height: '30@s'
     },
+   
 })
 
 export default styles

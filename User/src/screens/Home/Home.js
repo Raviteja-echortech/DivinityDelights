@@ -85,17 +85,13 @@ const Home = (props) => {
                   style={styles.bestSellersCards}>
                   <Image
                     source={{uri: item.image}}
-                    style={{height: 100, width: 100, alignSelf: 'center'}}
+                    style={styles.bestSellerPic}
                   />
                   <Text numberOfLines={1} style={styles.descriptionContent}>
                     {item.description}
                   </Text>
                   <Text
-                    style={{
-                      color: 'black',
-                      fontSize: 18,
-                      fontFamily: 'OpenSans-Bold',
-                    }}>
+                    style={styles.costTxt}>
                     ₹{item.cost}
                   </Text>
                   <TouchableOpacity style={styles.addBtn} onPress={()=>props?.navigation.navigate(routes.singleDish,{item})} >
@@ -119,6 +115,9 @@ const Home = (props) => {
               Our one-stop food solution has all your cravings covered. Order
               now and experience the ultimate snacking satisfaction!
             </Text>
+            <TouchableOpacity style={styles.pizzaBtn} >
+              <Text style={{color:"black",fontFamily:"Roboto-Medium"}} >Order Now</Text>
+            </TouchableOpacity>
           </View>
           <View style={{width: '40%', alignItems: 'center'}}>
             <Pizza width={scale(170)} height={scale(190)} />

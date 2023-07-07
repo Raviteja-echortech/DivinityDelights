@@ -19,7 +19,7 @@ export const styles = ScaledSheet.create({
     borderRadius: '5@s',
   },
   orderMe: {
-    width: '190@s',
+    width: '150@s',
     height: '180@s',
     marginTop: '20@s',
     paddingTop: '10@s',
@@ -117,9 +117,27 @@ export const styles = ScaledSheet.create({
     height: '70@s',
     width: '70@s',
   },
-  desTxt:{
+  desTxt: {
     justifyContent: 'center',
     fontFamily: 'Rashkey',
     color: '#FEBD69',
-  }
+  },
+  pizzaBtn: {
+    backgroundColor: '#FEBD69',
+    justifyContent: 'center',
+    width: '45%',
+    padding: '5%',
+    borderRadius: 5,
+    marginTop: '10@s',
+  },
+  costTxt: {
+    color: 'black',
+    fontSize: 18,
+    fontFamily: 'OpenSans-Bold',
+  },
+  bestSellerPic: {
+    height: 100,
+    width: 100,
+    alignSelf: 'center',
+  },
 });

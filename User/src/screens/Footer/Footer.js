@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React,{useEffect,useState} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {routes} from '../../routes/routes';
 import ProfileActive from '../../assets/svg/ProfileActive';
@@ -12,12 +11,31 @@ import HeartIconActive from "../../assets/svg/HeartIconActive"
 import HeartIconInActive from "../../assets/svg/HeartIconInActive"
 import CartInActive from '../../assets/svg/CartInActive';
 import Profile from '../Profile/Profile';
-import Cart from '../cart/Cart';
-import {View, KeyboardAvoidingView, Platform} from 'react-native';
-import {scale} from 'react-native-size-matters';
+import {View, KeyboardAvoidingView, Platform,Keyboard} from 'react-native';
+import {ScaledSheet, scale} from 'react-native-size-matters';
 import WishList from '../WishList/WishList';
+import CartPage from '../Cart/Cart';
 const Tab = createBottomTabNavigator();
 const Footer = () => {
+  const [keyboardShow, setKeyboardShow] = useState()
+  useEffect(() => {
+    const keyboardDidShowListener = Keyboard.addListener(
+        'keyboardDidShow',
+        () => {
+            setKeyboardShow(true)
+        }
+    )
+    const keyboardDidHideListener = Keyboard.addListener(
+        'keyboardDidHide',
+        () => {
+            setKeyboardShow(false)
+        }
+    )
+    return () => {
+        keyboardDidHideListener.remove()
+        keyboardDidShowListener.remove()
+    }
+}, [])
   return (
     <KeyboardAvoidingView
       style={{flex: 1}}
@@ -28,17 +46,10 @@ const Footer = () => {
         initialRouteName={routes.home}
         screenOptions={{
           tabBarShowLabel: false,
-          tabBarHideOnKeyboard:true,
+          tabBarHideOnKeyboard: true,
+          tabBarStyle: { ...styles.tabStyle},
+          display: keyboardShow ? 'none' : 'flex',
           headerShown: false,
-          tabBarStyle: {
-            position: 'absolute',
-            bottom: scale(5),
-            left: scale(20),
-            right: scale(20),
-            elevation: scale(10),
-            borderRadius: 10,
-            shadowColor: '	#c5c5c5',
-          },
         }}>
         <Tab.Screen
           name={routes.home}
@@ -66,7 +77,7 @@ const Footer = () => {
         />
         <Tab.Screen
           name={routes.cart}
-          component={Cart}
+          component={CartPage}
           options={{
             tabBarIcon: ({focused}) => {
               return <View>{focused ? <CartActive /> : <CartInActive />}</View>;
@@ -87,3 +98,15 @@ const Footer = () => {
   );
 };
 export default Footer;
+const styles=ScaledSheet.create({
+  tabStyle:{
+    position: 'absolute',
+    bottom: scale(5),
+    left: scale(20),
+    right: scale(20),
+    elevation: scale(10),
+    borderRadius: 10,
+    shadowColor: '	#c5c5c5',
+  }
+
+})
