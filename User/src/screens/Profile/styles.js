@@ -7,7 +7,7 @@ export const styles = ScaledSheet.create({
     color: 'black',
   },
   detailsBox: {
-    width: '90%',
+    width: '95%',
     alignSelf: 'center',
     marginTop: '10@s',
     justifyContent: 'center',
@@ -27,9 +27,11 @@ export const styles = ScaledSheet.create({
     marginBottom: '10@s',
   },
   editBox: {
-    color: '#20BD99',
-    marginRight: '5@s',
-    fontSize: '18@s',
+    flexDirection: 'row',
+    marginTop: "15@s",
+    borderTopWidth: "0.2@s",
+    borderColor: '#999999',
+    width: '100%',
   },
   nameTxt: {
     fontFamily: 'Roboto-Bold',
@@ -42,21 +44,27 @@ export const styles = ScaledSheet.create({
     fontSize: '12@s',
   },
   editOption: {
-    color: '#20BD99',
+    borderColor: '#999999',
     fontSize: '17@s',
-   
+    color: '#20BD99',
   },
   editBtn1: {
-    marginRight: "5@s",
-   width:"50@s",
-   justifyContent:"center",
-   borderRightWidth:1,
-   alignItems:"center",
-   borderColor:"#000000"
+    marginRight: '5@s',
+    width: '50@s',
+    justifyContent: 'center',
+    borderRightWidth: "0.2@s",
+    alignItems: 'center',
+    borderColor: '#000000',
   },
-  editBtn2:{
-    marginRight: "5@s",
-    padding: "5@s",
-    
+  editBtn2: {
+    marginRight: '5@s',
+    padding: '5@s',
+  },
+  addressStyles:{
+    marginBottom: 10,
+    borderWidth: 0.5,
+    borderColor: '#333333',
+    padding: 10,
+    borderRadius: 10,
   }
 });

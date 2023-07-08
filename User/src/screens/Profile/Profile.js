@@ -1,12 +1,12 @@
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {HeaderComponent} from '../../Utils/Utils';
 import {styles} from './styles';
 import {ScrollView} from 'react-native-gesture-handler';
-import { scale } from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
 
 const Profile = props => {
- const  address =[
+  const address = [
     {
       name: 'Phanindhra Kondru',
       billingArea: 'Echor Tech, 3th Floor DSL Abacus IT Park',
@@ -20,8 +20,8 @@ const Profile = props => {
       landMark: 'KIA CAR Show roon',
       state: 'HYDERABAD, TELANGANA 500031 India',
       mobileNum: '91+ 9908311663',
-    }
-  ]
+    },
+  ];
   return (
     <ScrollView contentContainerStyle={{backgroundColor: 'white'}}>
       <HeaderComponent props={props} title={'Profile'} />
@@ -53,26 +53,26 @@ const Profile = props => {
         <View style={{marginBottom: scale(60)}}>
           {address.map((el, i) => {
             return (
-              <View key={i} style={{marginBottom:10,borderWidth:0.5,borderColor:"#333333",padding:10,borderRadius:10,}} >
-                <Text style={styles.nameTxt} >{el.name}</Text>
-                <Text style={styles. billingTxt} >{el.billingArea}</Text>
-                <Text style={styles. billingTxt} >{el.landMark}</Text>
-                <Text style={styles. billingTxt} >{el.state}</Text>
-                <Text style={styles. billingTxt} >{el.mobileNum}</Text>
-                <View style={{flexDirection: 'row', marginTop: 5}}>
-                  <TouchableOpacity activeOpacity={0.7} style={styles.editBtn1} >
-                  <Text
-                    style={styles.editOption}>
-                    Edit
-                  </Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity activeOpacity={0.7}style={styles.editBtn2}  >
-                  <Text
-                    style={styles.editOption}>
-                    Remove
-                  </Text>
-                  </TouchableOpacity>
-                </View>
+              <View
+                key={i}
+                style={styles.addressStyles}>
+                <Text style={styles.nameTxt}>{el.name}</Text>
+                <Text style={styles.billingTxt}>{el.billingArea}</Text>
+                <Text style={styles.billingTxt}>{el.landMark}</Text>
+                <Text style={styles.billingTxt}>{el.state}</Text>
+                <Text style={styles.billingTxt}>{el.mobileNum}</Text>
+                <View style={styles.editBox}>
+                    <TouchableOpacity
+                      activeOpacity={0.7}
+                      style={styles.editBtn1}>
+                      <Text style={styles.editOption}>Edit</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      activeOpacity={0.7}
+                      style={styles.editBtn2}>
+                      <Text style={styles.editOption}>Remove</Text>
+                    </TouchableOpacity>
+                  </View>
               </View>
             );
           })}

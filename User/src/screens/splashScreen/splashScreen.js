@@ -1,9 +1,17 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Logo from "../../assets/svg/Logo.svg"
 import {View,Text} from "react-native"
 import { globalStyles } from "../../globalStyles/globalStyles"
 import { ScaledSheet } from 'react-native-size-matters';
-const SplashScreen=()=>{
+import { useIsFocused } from "@react-navigation/native";
+import { routes } from "../../routes/routes";
+const SplashScreen=(props)=>{
+  const isFocused=useIsFocused()
+  useEffect(()=>{
+    setTimeout(()=>{
+      props.navigation.replace(routes.footer)
+    },1000)
+  },[isFocused])
   return(
     <View style={[globalStyles.container,styles.parentScreen]}>
         <View style={styles.logoBackGroundColour} >

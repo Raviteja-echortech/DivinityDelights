@@ -13,21 +13,21 @@ import { ProgresssiveBar } from './src/Utils/Utils';
 const App=()=>{
 
   const Stack = createNativeStackNavigator();
-
+  const config = { animation: 'slide_from_right' }
   return(
     <NavigationContainer>
     <Stack.Navigator
-      initialRouteName={routes.footer}
+      initialRouteName={routes.SplashScreen}
       screenOptions={{
         headerShown: false,
       }} 
     >
-      <Stack.Screen name={routes.home} component={Home} />
-      <Stack.Screen name={routes.singleDish} component={SingleDish} />
-      <Stack.Screen name={routes.footer} component={Footer} />
-      <Stack.Screen name={routes.paymentGateWay} component={PaymentGateway} />
-      <Stack.Screen name={routes.orderpage} component={ProgresssiveBar} />
-      <Stack.Screen name={routes.SplashScreen} component={SplashScreen} />
+      <Stack.Screen name={routes.home} component={Home} options={config} />
+      <Stack.Screen name={routes.singleDish} component={SingleDish} options={config} />
+      <Stack.Screen name={routes.footer} component={Footer} options={config}/>
+      <Stack.Screen name={routes.paymentGateWay} component={PaymentGateway} options={config} />
+      <Stack.Screen name={routes.orderpage} component={ProgresssiveBar} options={config} />
+      <Stack.Screen name={routes.SplashScreen} component={SplashScreen} options={config} />
       </Stack.Navigator>
    </NavigationContainer>
   )
