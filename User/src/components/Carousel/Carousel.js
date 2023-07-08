@@ -12,11 +12,31 @@ const Carousel = () => {
       source:
         'https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/lkn0extnvjywfts4q7gw',
     },
-    {id: 2, source: 'https://www.cookwithnabeela.com/wp-content/uploads/2023/03/MuttonBiryani.webp'},
-    {id: 3, source: 'https://t4.ftcdn.net/jpg/02/28/09/67/360_F_228096754_nK2RWPidbk69ftKQIjjfjEA6NgZI20mg.jpg'},
-    {id: 4, source: 'https://media-cdn.tripadvisor.com/media/photo-m/1280/1b/db/46/e1/mutton-nalli-biryani.jpg'},
-    {id: 5, source: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/hyderabadi-biryani-recipe-chicken.jpg.webp'},
-    {id: 6, source: 'https://media.istockphoto.com/id/1292618342/photo/tasty-veg-schezwan-fried-rice-served-in-bowl-over-a-rustic-wooden-background-indian-cuisine.jpg?s=612x612&w=0&k=20&c=lPVC_pXkguBLWme58H_wVx_Tn-4dXy3wAyX4JSekSlc='},
+    {
+      id: 2,
+      source:
+        'https://www.cookwithnabeela.com/wp-content/uploads/2023/03/MuttonBiryani.webp',
+    },
+    {
+      id: 3,
+      source:
+        'https://t4.ftcdn.net/jpg/02/28/09/67/360_F_228096754_nK2RWPidbk69ftKQIjjfjEA6NgZI20mg.jpg',
+    },
+    {
+      id: 4,
+      source:
+        'https://media-cdn.tripadvisor.com/media/photo-m/1280/1b/db/46/e1/mutton-nalli-biryani.jpg',
+    },
+    {
+      id: 5,
+      source:
+        'https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/hyderabadi-biryani-recipe-chicken.jpg.webp',
+    },
+    {
+      id: 6,
+      source:
+        'https://media.istockphoto.com/id/1292618342/photo/tasty-veg-schezwan-fried-rice-served-in-bowl-over-a-rustic-wooden-background-indian-cuisine.jpg?s=612x612&w=0&k=20&c=lPVC_pXkguBLWme58H_wVx_Tn-4dXy3wAyX4JSekSlc=',
+    },
   ];
 
   const {height, width} = Dimensions.get('window');
@@ -79,17 +99,16 @@ const Carousel = () => {
                 },
                 currentIndex == index && {
                   backgroundColor: '#FEBD69',
-                   width:"95%",
-                   height:"60%",
+                  width: '95%',
+                  height: '60%',
                   borderRadius: 50,
                   justifyContent: 'center',
                   alignItems: 'center',
                 },
               ]}>
               {currentIndex == index ? (
-                <Text
-                  style={{fontSize: 10, color: 'black'}}>
-                  {currentIndex+1}/{images.length}
+                <Text style={{fontSize: 10, color: 'black'}}>
+                  {currentIndex + 1}/{images.length}
                 </Text>
               ) : null}
             </View>

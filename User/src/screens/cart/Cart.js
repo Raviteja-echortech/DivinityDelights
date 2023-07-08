@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {View, ScrollView, Image, Text, TouchableOpacity} from 'react-native';
-import  {HeaderComponent, } from '../../Utils/Utils';//ProgresssiveBar
+import  {HeaderComponent,ProgresssiveBar } from '../../Utils/Utils';//ProgresssiveBar
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useIsFocused} from '@react-navigation/native';
 import DeleteIcon from '../../assets/svg/DeleteIcon';
@@ -51,7 +51,7 @@ const CartPage = props => {
         </View>
       ) : (
         <View style={styles.cartContainer}>
-           {/* <ProgresssiveBar/> */}
+           <ProgresssiveBar/>
           {cartData.map((el, i) => {
             return (
               <View key={i} style={styles.cartItem}>

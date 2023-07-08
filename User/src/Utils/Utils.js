@@ -1,11 +1,12 @@
-import React, {useState} from 'react';
-
-import {View, TextInput, TouchableOpacity, Text, Animated} from 'react-native';
-import {styles} from './styles';
+import React, {useRef, useState} from 'react';
+import StepIndicator from 'react-native-step-indicator';
+import {View, TextInput, TouchableOpacity, Text} from 'react-native';
+import {styles} from './styles';//https://www.npmjs.com/package/react-native-step-indicator
 import SearchIcon from '../assets/svg/SearchIcon';
 import BackArrow from '../assets/svg/BackArrow';
 import Hamberugmenu from '../assets/svg/Hamberugmenu';
-import {ScaledSheet} from 'react-native-size-matters';
+import { scale } from 'react-native-size-matters';
+
 export const SearchBox = ({valuesGiven, changeText, search, hamberugmenu}) => {
   return (
     <View style={styles.container}>
@@ -49,36 +50,32 @@ export const HeaderComponent = ({props, title}) => {
     </View>
   );
 };
+export const ProgresssiveBar = () => {
+  const[select,setSelected]=useState(0)
+  
+const labels = ["Cart","Delivery Address","Order Summary","Payment Method","Recived"];
+ const progressBar=()=>{
+  setSelected(select+1)
+  if(labels.length==select){
+    setSelected(0)
+  }
+ }
+  return (
+      <View style={{height:scale(150),}} >
+        <View  >
+      <StepIndicator
+         customStyles={styles.customStyles}
+         currentPosition={select}
+         labels={labels}
+        // renderLabel={({position,stepStatus,lable,currentPosition})=>{
 
-// export const ProgresssiveBar = () => {
-//   const [stages, setStages] = useState([
-//     'OrderPlaced',
-//     'Pick up',
-//     'On way',
-//     'Delivered',
-//   ]);
-//   return (
-//     <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
-//       {stages.map((el, i) => {
-//         return (
-//           <View key={i} style={styles.progressInnerBox}>
-//             <View style={styles.progressCircleParent}>
-//               <View style={styles.progressCircleChild}></View>
-//             </View>
-//             <View
-//               style={{
-//                 width: '60%',
-//                 height: '20%',
-//                 backgroundColor: 'green',
-//               }}></View>
-//             <View>
-//               <Text numberOfLines={1} style={styles.progressBarTxt}>
-//                 {el}
-//               </Text>
-//             </View>
-//           </View>
-//         );
-//       })}
-//     </View>
-//   );
-// };
+        // }}
+        //direction='vertical'
+    />
+    </View>
+     <TouchableOpacity  activeOpacity={0.7} onPress={progressBar} style={styles.nextBtn} >
+      <Text style={styles.nextTxt} >Next Step</Text>
+    </TouchableOpacity>
+    </View>
+  );
+};
