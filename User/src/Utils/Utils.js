@@ -64,7 +64,7 @@ export const ProgresssiveBar = props => {
   return (
     <View style={globalStyles.container}>
       <HeaderComponent props={props} title="track Your order" />
-      <View style={{height: '80%', alignItems: 'center',alignSelf:"center"}}>
+      <View style={styles.progressBarContainer}>
         <StepIndicator
           customStyles={styles.customStyles}
           currentPosition={select}

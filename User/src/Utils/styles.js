@@ -105,7 +105,6 @@ export const styles = ScaledSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '5@s',
-    alignContent:"center",
     alignSelf: 'center',
     padding: '3%',
     marginTop: '2%',
@@ -113,5 +112,10 @@ export const styles = ScaledSheet.create({
   nextTxt: {
     color: 'black',
     fontFamily: 'Rashkey',
+  },
+  progressBarContainer: {
+    height: '80%',
+    width: '90%',
+    marginLeft: '10%',
   },
 });

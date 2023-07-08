@@ -63,6 +63,7 @@ export const styles = ScaledSheet.create({
   addressStyles:{
     marginBottom: 10,
     borderWidth: 0.5,
+    marginTop:5,
     borderColor: '#333333',
     padding: 10,
     borderRadius: 10,
