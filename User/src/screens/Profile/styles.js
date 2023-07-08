@@ -44,9 +44,19 @@ export const styles = ScaledSheet.create({
   editOption: {
     color: '#20BD99',
     fontSize: '17@s',
+   
   },
-  editBtn: {
+  editBtn1: {
     marginRight: "5@s",
-    padding: "10@s",
+   width:"50@s",
+   justifyContent:"center",
+   borderRightWidth:1,
+   alignItems:"center",
+   borderColor:"#000000"
   },
+  editBtn2:{
+    marginRight: "5@s",
+    padding: "5@s",
+    
+  }
 });

@@ -60,13 +60,13 @@ const Profile = props => {
                 <Text style={styles. billingTxt} >{el.state}</Text>
                 <Text style={styles. billingTxt} >{el.mobileNum}</Text>
                 <View style={{flexDirection: 'row', marginTop: 5}}>
-                  <TouchableOpacity activeOpacity={0.7} style={styles.editBtn} >
+                  <TouchableOpacity activeOpacity={0.7} style={styles.editBtn1} >
                   <Text
                     style={styles.editOption}>
                     Edit
                   </Text>
                   </TouchableOpacity>
-                  <TouchableOpacity activeOpacity={0.7}style={styles.editBtn}  >
+                  <TouchableOpacity activeOpacity={0.7}style={styles.editBtn2}  >
                   <Text
                     style={styles.editOption}>
                     Remove

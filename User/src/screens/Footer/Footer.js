@@ -7,13 +7,13 @@ import Home from '../Home/Home';
 import HomeIconActive from '../../assets/svg/HomeIconActive';
 import HomeIconInActive from '../../assets/svg/HomeIconInActive';
 import CartActive from '../../assets/svg/CartActive';
-import HeartIconActive from "../../assets/svg/HeartIconActive"
-import HeartIconInActive from "../../assets/svg/HeartIconInActive"
+// import HeartIconActive from "../../assets/svg/HeartIconActive"
+// import HeartIconInActive from "../../assets/svg/HeartIconInActive"
 import CartInActive from '../../assets/svg/CartInActive';
 import Profile from '../Profile/Profile';
 import {View, KeyboardAvoidingView, Platform,Keyboard} from 'react-native';
 import {ScaledSheet, scale} from 'react-native-size-matters';
-import WishList from '../WishList/WishList';
+// import WishList from '../WishList/WishList';
 import CartPage from '../Cart/Cart';
 const Tab = createBottomTabNavigator();
 const Footer = () => {
@@ -84,15 +84,7 @@ const Footer = () => {
             },
           }}
         />
-        <Tab.Screen name={routes.wishList} component={WishList} options={{
-          tabBarIcon:({focused})=>{
-            return(
-              <View>
-                {focused?<HeartIconActive/>:<HeartIconInActive/>}
-              </View>
-            )
-          }
-        }} />
+        
       </Tab.Navigator>
     </KeyboardAvoidingView>
   );

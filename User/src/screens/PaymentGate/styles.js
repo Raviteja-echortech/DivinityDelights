@@ -75,4 +75,15 @@ export const styles = ScaledSheet.create({
     marginLeft: '3%',
     marginBottom: '3%',
   },
+  proccedBtn: {
+    backgroundColor: 'orange',
+    height: "50@s",
+    width: '30%',
+    position: 'absolute',
+    bottom: "10@s",
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: "5@s",
+  },
 });

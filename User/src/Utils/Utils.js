@@ -1,11 +1,12 @@
 import React, {useRef, useState} from 'react';
 import StepIndicator from 'react-native-step-indicator';
 import {View, TextInput, TouchableOpacity, Text} from 'react-native';
-import {styles} from './styles';//https://www.npmjs.com/package/react-native-step-indicator
+import {styles} from './styles'; //https://www.npmjs.com/package/react-native-step-indicator
 import SearchIcon from '../assets/svg/SearchIcon';
 import BackArrow from '../assets/svg/BackArrow';
 import Hamberugmenu from '../assets/svg/Hamberugmenu';
-import { scale } from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters';
+import {globalStyles} from '../globalStyles/globalStyles';
 
 export const SearchBox = ({valuesGiven, changeText, search, hamberugmenu}) => {
   return (
@@ -50,32 +51,35 @@ export const HeaderComponent = ({props, title}) => {
     </View>
   );
 };
-export const ProgresssiveBar = () => {
-  const[select,setSelected]=useState(0)
-  
-const labels = ["Cart","Delivery Address","Order Summary","Payment Method","Recived"];
- const progressBar=()=>{
-  setSelected(select+1)
-  if(labels.length==select){
-    setSelected(0)
-  }
- }
-  return (
-      <View style={{height:scale(150),}} >
-        <View  >
-      <StepIndicator
-         customStyles={styles.customStyles}
-         currentPosition={select}
-         labels={labels}
-        // renderLabel={({position,stepStatus,lable,currentPosition})=>{
+export const ProgresssiveBar = props => {
+  const [select, setSelected] = useState(0);
 
-        // }}
-        //direction='vertical'
-    />
-    </View>
-     <TouchableOpacity  activeOpacity={0.7} onPress={progressBar} style={styles.nextBtn} >
-      <Text style={styles.nextTxt} >Next Step</Text>
-    </TouchableOpacity>
+  const labels = ['Order Placed', 'Inprogress', 'Shipped', 'delivered'];
+  const progressBar = () => {
+    setSelected(select + 1);
+    if (labels.length == select) {
+      setSelected(0);
+    }
+  };
+  return (
+    <View style={globalStyles.container}>
+      <HeaderComponent props={props} title="track Your order" />
+      <View style={{height: '80%', alignItems: 'center',alignSelf:"center"}}>
+        <StepIndicator
+          customStyles={styles.customStyles}
+          currentPosition={select}
+          labels={labels}
+          // renderLabel={({position,stepStatus,lable,currentPosition})=>{
+          // }}
+          direction="vertical"
+        />
+      </View>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={progressBar}
+        style={styles.nextBtn}>
+        <Text style={styles.nextTxt}>Next Step</Text>
+      </TouchableOpacity>
     </View>
   );
 };

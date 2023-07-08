@@ -30,22 +30,8 @@ const SingleDish = props => {
       console.log(err);
     }
   };
-  const addToWishList = async (id) => {
-    if (wish === true) {
-      try {
-        const data = await AsyncStorage.getItem('wish');
-        let existingWish = [];
-        if (data !== null) {
-          existingWish = JSON.parse(data);
-        }
-        existingWish.push(singleProduct);
-        console.log(existingWish)
-        await AsyncStorage.setItem('wish', JSON.stringify(existingWish));
-      } catch (err) {
-        console.log(err);
-      }
-    } else {
-    }
+  const addToWishList = async () => {
+ 
     setWish(!wish);
   };
   return (

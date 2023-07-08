@@ -6,5 +6,6 @@
     profile:"profile",
     footer:"Footer",
     wishList:"WishList",
-    paymentGateWay:"paymentGateWay"
+    paymentGateWay:"paymentGateWay",
+    orderpage:"progressivebar"
 }
