@@ -60,8 +60,9 @@ export const styles = ScaledSheet.create({
     marginTop: '5%',
   },
   majorTxt: {
-    fontSize: '16@s',
+    fontSize: '11@s',
     color: 'black',
+   alignSelf:"center",
     fontFamily: 'OpenSans-SemiBold',
   },
   nameTxt: {

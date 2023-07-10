@@ -62,4 +62,13 @@ export const styles = ScaledSheet.create({
     fontSize: '25@s',
     textAlign: 'center',
   },
+  wishStyle:{
+    width: '10%',
+    alignItems: 'center',
+    padding: '3%',
+    justifyContent: 'center',
+    position: 'absolute',
+    right: "50@s",
+    top: "50@s",
+  }
 });

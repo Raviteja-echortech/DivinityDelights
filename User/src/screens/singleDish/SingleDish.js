@@ -45,15 +45,7 @@ const SingleDish = props => {
         <TouchableOpacity
           activeOpacity={0.7}
           onPress={()=>addToWishList(singleProduct.id)}
-          style={{
-            width: '10%',
-            alignItems: 'center',
-            padding: '3%',
-            justifyContent: 'center',
-            position: 'absolute',
-            right: 50,
-            top: 50,
-          }}>
+          style={styles.wishStyle}>
           {wish ? <WishUnSelected /> : <WishListSelected />}
         </TouchableOpacity>
         <View style={{marginBottom: '5%', width: '80%'}}>

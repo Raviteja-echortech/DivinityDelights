@@ -118,4 +118,36 @@ export const styles = ScaledSheet.create({
     width: '90%',
     marginLeft: '10%',
   },
+
+//shimmer
+  shimmer: {
+    overflow: 'hidden',
+    backgroundColor: '#eee',
+},
+shimmer: {
+  borderRadius: '6@s',
+  overflow: 'hidden'
+},
+categoryShimmer: {
+  width: '90%',
+  alignSelf: 'center',
+  marginTop: '2%',
+  flexDirection: 'row'
+},
+shimmerHeading: {
+  width: '50%',
+  height: '50@s',
+  alignSelf: 'center',
+  marginTop: '5%'
+},
+shimmerCard: {
+  width: '90%',
+  height: '110@s',
+  alignSelf: 'center',
+  marginTop: '5%'
+},
+shimmer: {
+  overflow: 'hidden',
+  backgroundColor: '#eee',
+},
 });

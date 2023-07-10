@@ -140,4 +140,73 @@ export const styles = ScaledSheet.create({
     width: 100,
     alignSelf: 'center',
   },
+  header:{
+    width: '90%',
+    height: '60@s',
+    alignSelf: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  shimmer: {
+    borderRadius: '6@s',
+    overflow: 'hidden'
+},
+carouselShimmer: {
+  width:Dimensions.get('window').width*0.90,
+  alignSelf: 'center',
+  marginTop: '5%',
+  marginBottom: '2%',
+  height: '165@s'
+},
+categoryContainer: {
+  height: '35@s',
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderColor: 'gray',
+  margin: '5@s',
+  paddingLeft: '15@s',
+  paddingRight: '15@s',
+  borderRadius: '29@s',
+  backgroundColor: '#F4F4F4'
+},
+categoryShimmer: {
+  width: '90%',
+  alignSelf: 'center',
+  marginTop: '2%',
+  flexDirection: 'row'
+},
+locationContainer: {
+  height: '40@s',
+  width: '90%',
+  alignSelf: 'center',
+  backgroundColor: '#FFE56C',
+  // paddingLeft: '5%',
+  // paddingRight: '5%',
+  alignItems: 'center',
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+  position: 'relative',
+  borderRadius: '8@s',
+},
+buttonContainer: {
+  width: '90%',
+  height: '110@s',
+  alignSelf: 'center',
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  marginTop: '2%',
+  marginBottom: '2%',
+},
+buttonShimmer: {
+  width: '48%',
+  height: '100@s',
+},
+shimmerHeading: {
+  width: '50%',
+  height: '50@s',
+  alignSelf: 'center',
+  marginTop: '5%'
+},
 });
