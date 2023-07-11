@@ -2,11 +2,11 @@ import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
-  ScrollView,
   FlatList,
   Image,
   TouchableOpacity,
 } from 'react-native';
+import { ScrollView } from 'react-native-virtualized-view';
 import {styles} from './styles';
 import LegPecies from '../../assets/svg/LegPecies';
 import Heart from '../../assets/svg/Heart';
@@ -45,8 +45,8 @@ const Home = props => {
   return (
     <View style={globalStyles.container}>
       <SearchBox valuesGiven={name} hamberugmenu={()=>props?.navigation?.openDrawer()} changeText={text => setname(text)} />
-      {foodItems.length === 0 ? (
-        <View>
+      {foodItems.length=== 0 ? (
+        <ScrollView contentContainerStyle={{flexGrow:1}}>
           <View
             style={[
               styles.header,
@@ -94,7 +94,7 @@ const Home = props => {
           <View style={[styles.shimmerCard, styles.shimmer]}>
             {shimmerLoading}
           </View>
-        </View>
+        </ScrollView>
       ) : (
         <ScrollView style={styles.bodyContent}>
           <Carousel />

@@ -10,7 +10,6 @@ const SplashScreen=(props)=>{
   useEffect(()=>{
     const timer=setTimeout(()=>{
       props.navigation.replace(routes.footer)
-      
     },1000)
     return () => clearTimeout(timer)
   },[isFocused])

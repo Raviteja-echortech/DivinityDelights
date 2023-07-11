@@ -17,7 +17,6 @@ const SingleDish = props => {
 
   const addToCart = async id => {
     try {
-      // await AsyncStorage.clear();
       const data = await AsyncStorage.getItem('cart');
       let existingProduct = [];
       if (data !== null) {

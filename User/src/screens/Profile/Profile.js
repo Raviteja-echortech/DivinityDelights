@@ -54,6 +54,7 @@ const Profile = props => {
         <TextInput
           placeholder="Enter mobile"
           style={styles.inputBoxArrange}
+          maxLength={10}
           placeholderTextColor={'#807D7E'}
           keyboardType="numeric"
         />

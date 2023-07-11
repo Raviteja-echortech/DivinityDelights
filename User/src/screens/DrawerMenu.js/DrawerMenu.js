@@ -31,7 +31,7 @@ const DrawerNavigation = () => {
       screenOptions={{
         headerMode: 'float',
         headerShown: false,
-        overlayColor: 'transparent',
+        //overlayColor: 'transparent',
         swipeEnabled: false,
       }}
       drawerContent={props => {
