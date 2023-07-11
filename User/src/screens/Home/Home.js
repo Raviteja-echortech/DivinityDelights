@@ -30,7 +30,6 @@ const Home = props => {
   useEffect(() => {
     FoodImages().then(res => setFoodItems(res));
   }, [isFocused]);
-
   const data = [
     {
       name: 'DELICIOUSLY PURE VEGGIE',
@@ -45,7 +44,7 @@ const Home = props => {
   ];
   return (
     <View style={globalStyles.container}>
-      <SearchBox valuesGiven={name} changeText={text => setname(text)} />
+      <SearchBox valuesGiven={name} hamberugmenu={()=>props?.navigation?.openDrawer()} changeText={text => setname(text)} />
       {foodItems.length === 0 ? (
         <View>
           <View

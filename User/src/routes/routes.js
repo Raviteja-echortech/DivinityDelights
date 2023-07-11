@@ -7,5 +7,6 @@
     footer:"Footer",
     wishList:"WishList",
     paymentGateWay:"paymentGateWay",
-    orderpage:"progressivebar"
+    orderpage:"progressivebar",
+    DrawerNavigation:"DrawerNavigation"
 }

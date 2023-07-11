@@ -16,7 +16,7 @@ import {ScaledSheet, scale} from 'react-native-size-matters';
 // import WishList from '../WishList/WishList';
 import CartPage from '../Cart/Cart';
 const Tab = createBottomTabNavigator();
-const Footer = () => {
+const Footer = (props) => {
   const [keyboardShow, setKeyboardShow] = useState()
   useEffect(() => {
     const keyboardDidShowListener = Keyboard.addListener(

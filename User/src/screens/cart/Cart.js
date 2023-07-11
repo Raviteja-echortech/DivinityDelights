@@ -65,7 +65,8 @@ const CartPage = props => {
                 <TouchableOpacity
                   onPress={() => removeItem(el.id)}
                   style={styles.deleteIcon}
-                  activeOpacity={0.7}>
+                  activeOpacity={0.7}
+                  >
                   <DeleteIcon />
                 </TouchableOpacity>
               </View>

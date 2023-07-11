@@ -8,9 +8,11 @@ import { routes } from "../../routes/routes";
 const SplashScreen=(props)=>{
   const isFocused=useIsFocused()
   useEffect(()=>{
-    setTimeout(()=>{
+    const timer=setTimeout(()=>{
       props.navigation.replace(routes.footer)
+      
     },1000)
+    return () => clearTimeout(timer)
   },[isFocused])
   return(
     <View style={[globalStyles.container,styles.parentScreen]}>

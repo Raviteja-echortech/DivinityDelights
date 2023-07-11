@@ -8,11 +8,12 @@ import SplashScreen from "./src/screens/splashScreen/splashScreen";
 import Footer from "./src/screens/Footer/Footer";
 import PaymentGateway from "./src/screens/PaymentGate/PaymentGate";
 import { ProgresssiveBar } from './src/Utils/Utils';
+import DrawerNavigation from "./src/screens/DrawerMenu.js/DrawerMenu";
 
 
 const App=()=>{
+const Stack = createNativeStackNavigator();
 
-  const Stack = createNativeStackNavigator();
   const config = { animation: 'slide_from_right' }
   return(
     <NavigationContainer>
@@ -24,7 +25,7 @@ const App=()=>{
     >
       <Stack.Screen name={routes.home} component={Home} options={config} />
       <Stack.Screen name={routes.singleDish} component={SingleDish} options={config} />
-      <Stack.Screen name={routes.footer} component={Footer} options={config}/>
+      <Stack.Screen name={routes.footer} component={DrawerNavigation} options={config}/>
       <Stack.Screen name={routes.paymentGateWay} component={PaymentGateway} options={config} />
       <Stack.Screen name={routes.orderpage} component={ProgresssiveBar} options={config} />
       <Stack.Screen name={routes.SplashScreen} component={SplashScreen} options={config} />
