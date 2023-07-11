@@ -6,7 +6,6 @@ import {
 } from '@react-navigation/drawer';
 import Footer from '../Footer/Footer';
 import {routes} from '../../routes/routes';
-import {scale} from 'react-native-size-matters';
 
 const DrawerMenu = props => {
   return (
@@ -17,7 +16,11 @@ const DrawerMenu = props => {
         flex: 1,
         height: Dimensions.get('window').height,
         justifyContent: 'space-between',
-      }}></DrawerContentScrollView>
+      }}>
+        <View>
+          
+        </View>
+      </DrawerContentScrollView>
   );
 };
 const DrawerNavigation = () => {
@@ -34,7 +37,7 @@ const DrawerNavigation = () => {
       drawerContent={props => {
         return <DrawerMenu {...props} />;
       }}>
-      <Drawer.Screen name="bottomtabbar">{props => <Footer />}</Drawer.Screen>
+      <Drawer.Screen name="bottomtabbar">{props => <Footer/>}</Drawer.Screen>
     </Drawer.Navigator>
   );
 };
